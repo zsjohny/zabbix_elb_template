@@ -45,7 +45,7 @@ start = end - datetime.timedelta(minutes=5)
 
 #get the region
 if (options.region == None):
-    options.region = 'us-east-1'
+    options.region = 'cn-north-1'
     
 for r in boto.ec2.cloudwatch.regions():
    if (r.name == options.region):
