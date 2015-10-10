@@ -13,9 +13,9 @@ parser.add_option("-a", "--access-key", dest="access_key",
 parser.add_option("-s", "--secret-key", dest="secret_key",
                 help="AWS Secret Access Key")
 parser.add_option("-m", "--metric", dest="metric",
-                help="AWS cloudwatch metric")
+                help="ELB cloudwatch metric")
 parser.add_option("-r", "--region", dest="region",
-                help="RDS region")
+                help="AWS region")
 
 (options, args) = parser.parse_args()
 
@@ -26,9 +26,9 @@ if (options.access_key == None):
 if (options.secret_key == None):
     parser.error("-s AWS Secret Key is required")
 if (options.metric == None):
-    parser.error("-m AWS cloudwatch metric is required")
+    parser.error("-m ELB cloudwatch metric is required")
 if (options.region == None):
-    parser.error("-r RDS region is required")    
+    parser.error("-r AWS region is required")    
 ###
 
 ### Real code
