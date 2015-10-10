@@ -6,7 +6,7 @@ import boto.ec2.cloudwatch
 
 ### Arguments
 parser = OptionParser()
-parser.add_option("-i", "--instance-id", dest="instance_id",
+parser.add_option("-l", "--load-balancer-name", dest="load-balancer-name",
                 help="LoadBalancerName")
 parser.add_option("-a", "--access-key", dest="access_key",
                 help="AWS Access Key")
@@ -19,8 +19,8 @@ parser.add_option("-r", "--region", dest="region",
 
 (options, args) = parser.parse_args()
 
-if (options.instance_id == None):
-    parser.error("-i DBInstanceIdentifier is required")
+if (options.load-balancer-name == None):
+    parser.error("-l Load Balancer Name is required")
 if (options.access_key == None):
     parser.error("-a AWS Access Key is required")
 if (options.secret_key == None):
@@ -59,7 +59,7 @@ for k,vh in metrics.items():
     if (k == options.metric):
 
         try:
-                res = conn.get_metric_statistics(60, start, end, k, "AWS/ELB", "Average", {"LoadBalancerName": options.instance_id})
+                res = conn.get_metric_statistics(60, start, end, k, "AWS/ELB", "Average", {"LoadBalancerName": options.load-balancer-name})
                
         except Exception, e:
                 print "status err Error running elb_stats: %s" % e.error_message
