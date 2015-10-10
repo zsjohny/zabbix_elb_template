@@ -26,7 +26,7 @@ if (options.access_key == None):
 if (options.secret_key == None):
     parser.error("-s AWS Secret Key is required")
 if (options.metric == None):
-    parser.error("-m RDS cloudwatch metric is required")
+    parser.error("-m AWS cloudwatch metric is required")
 ###
 
 ### Real code
