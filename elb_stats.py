@@ -6,7 +6,7 @@ import boto.ec2.cloudwatch
 
 ### Arguments
 parser = OptionParser()
-parser.add_option("-l", "--load-balancer-name", dest="load-balancer-name",
+parser.add_option("-l", "--load-balancer-name", dest="load_balancer_name",
                 help="LoadBalancerName")
 parser.add_option("-a", "--access-key", dest="access_key",
                 help="AWS Access Key")
@@ -19,7 +19,7 @@ parser.add_option("-r", "--region", dest="region",
 
 (options, args) = parser.parse_args()
 
-if (options.load-balancer-name == None):
+if (options.load_balancer_name == None):
     parser.error("-l Load Balancer Name is required")
 if (options.access_key == None):
     parser.error("-a AWS Access Key is required")
