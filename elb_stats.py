@@ -13,9 +13,9 @@ parser.add_option("-a", "--access-key", dest="access_key",
 parser.add_option("-s", "--secret-key", dest="secret_key",
                 help="AWS Secret Access Key")
 parser.add_option("-m", "--metric", dest="metric",
-                help="RDS cloudwatch metric")
+                help="AWS cloudwatch metric")
 parser.add_option("-r", "--region", dest="region",
-                help="RDS region")
+                help="AWS region")
 
 (options, args) = parser.parse_args()
 
