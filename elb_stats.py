@@ -59,7 +59,7 @@ for k,vh in metrics.items():
     if (k == options.metric):
 
         try:
-                res = conn.get_metric_statistics(60, start, end, k, "AWS/ELB", "Average", {"LoadBalancerName": options.load-balancer-name})
+                res = conn.get_metric_statistics(60, start, end, k, "AWS/ELB", "Average", {"LoadBalancerName": options.load_balancer_name})
                
         except Exception, e:
                 print "status err Error running elb_stats: %s" % e.error_message
