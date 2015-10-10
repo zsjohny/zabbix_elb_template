@@ -40,7 +40,7 @@ metrics = {"HealthyHostCount":{"type":"float", "value":None},
     "HTTPCode_ELB_5XX":{"type":"int", "value":None},
     "BackendConnectionErrors":{"type":"int", "value":None},
     "SurgeQueueLength":{"type":"int", "value":None},
-    "Latency":{"type":"int", "value":None}   
+    "Latency":{"type":"int", "value":None}}   
 
 end = datetime.datetime.utcnow()
 start = end - datetime.timedelta(minutes=5)
