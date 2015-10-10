@@ -27,6 +27,8 @@ if (options.secret_key == None):
     parser.error("-s AWS Secret Key is required")
 if (options.metric == None):
     parser.error("-m AWS cloudwatch metric is required")
+if (options.region == None):
+    parser.error("-r AWS region is required")    
 ###
 
 ### Real code
